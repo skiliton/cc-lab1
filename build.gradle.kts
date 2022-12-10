@@ -33,7 +33,7 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Jar> {
     manifest {
         attributes["Class-Path"] = "cc-lab1.main"
-        attributes["Main-Class"] = "ua.repeta.cclab1.CcLab1Application"
+        attributes["Main-Class"] = "ua.repeta.cclab1.CcLab1ApplicationKt"
     }
 }
 
