@@ -35,11 +35,5 @@ tasks.named('test') {
 }
 
 jar {
-	manifest {
-		attributes(
-				'Main-Class': 'ua.repeta.cclab1.CcLab1ApplicationKt'
-		)
-	}
-	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-	from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+	enabled = false
 }
