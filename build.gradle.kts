@@ -31,6 +31,7 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.withType<Jar> {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     manifest {
         attributes["Class-Path"] = "cc-lab1.main"
         attributes["Main-Class"] = "ua.repeta.cclab1.CcLab1ApplicationKt"
