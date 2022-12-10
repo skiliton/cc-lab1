@@ -35,6 +35,9 @@ tasks.withType<Jar> {
         attributes["Class-Path"] = "cc-lab1.main"
         attributes["Main-Class"] = "ua.repeta.cclab1.CcLab1ApplicationKt"
     }
+    configurations["compileClasspath"].forEach { file: File ->
+        from(zipTree(file.absoluteFile))
+    }
 }
 
 tasks.withType<Test> {
